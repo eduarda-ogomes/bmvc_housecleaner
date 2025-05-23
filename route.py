@@ -22,11 +22,21 @@ def helper(info= None):
 #-----------------------------------------------------------------------------
 # Suas rotas aqui:
 
+@app.route('/login', methods=['GET'])
+def action_login():
+    return ctl.render('login')
+
+@app.route('/cadastro', method=['GET'])
+def action_cadastro():
+    return ctl.render('cadastro')
+
+@app.route('/homepage', method=['GET'])
+def action_homepage():
+    return ctl.render('homepage')
 
 
 #-----------------------------------------------------------------------------
 
 
 if __name__ == '__main__':
-
     run(app, host='0.0.0.0', port=8080, debug=True)
