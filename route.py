@@ -18,6 +18,9 @@ def serve_static(filepath):
 def helper(info= None):
     return ctl.render('helper')
 
+@app.route('/change username')
+def serve_static(filepath):
+    return static_file(filepath, root='./app/static')
 
 #-----------------------------------------------------------------------------
 # Suas rotas aqui:
